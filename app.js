@@ -2,6 +2,8 @@
 
 const express = require("express")
 const app = express()
+
+/*
 const mongoose = require("mongoose")
 const handlebars = require("handlebars")
 const { engine } = require("express-handlebars")
@@ -298,3 +300,17 @@ app.listen(porta, () => {
     console.log(`SUCESSO! Servidor Funcionando na Porta ${port}`)
 })
 
+*/
+
+const port = process.env.PORT || 3030
+
+app.listen(port, () => {
+    console.log(`SUCESSO! Servidor Funcionando na Porta ${port}`)
+})
+
+app.get("/teste", (req, res) => {
+
+    console.log("Testando")
+    res.send("Testando")
+
+})
